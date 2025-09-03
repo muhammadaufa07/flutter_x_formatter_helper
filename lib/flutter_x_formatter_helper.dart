@@ -1,5 +1,14 @@
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
+
+class FormatterHelper {
+  static String formatRp(int price) {
+    var formatter = NumberFormat('###,###', 'id');
+    return "Rp ${formatter.format((price))}";
+  }
+
+  static String formatRpDouble(double price) {
+    var formatter = NumberFormat('###,###', 'id');
+    return "Rp ${formatter.format((price))}";
+  }
 }
